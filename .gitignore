@@ -1,0 +1,9 @@
+node_modules/
+dist/
+coverage/
+reports/
+repo-doctor-reports/
+*.log
+*.tgz
+.npm-cache/
+.DS_Store

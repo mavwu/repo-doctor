@@ -1,0 +1,2223 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`report snapshots and comparison mode > keeps Markdown and structured JSON summaries stable 1`] = `
+"# repo-doctor health report
+
+Generated: <timestamp>
+
+Scanned directory: <fixture-root>
+
+This is a heuristic, read-only review. Check states distinguish **passed**, **failed**, **warning**, **unknown**, and **not applicable**. Scores measure demonstrated evidence; they are not proof of correctness or security.
+
+## Report metadata
+
+- Tool version: 0.1.0
+- Scan time: <duration>
+- Scoring profile: portfolio
+- Comparison mode: peer
+- Repository count: 8
+- Ignored directories/patterns: .cache, .dart_tool, .next, .nuxt, .output, .terraform, .venv, build, coverage, dist, node_modules, target, vendor, venv
+
+## Directory summary
+
+- Repositories discovered: 8
+- Repositories analysed: 8
+- Average score: 62/100
+- Median score: 66/100
+- Average confidence: 0.84
+- Repositories requiring attention (below 70 or critical action): 4
+
+### Strongest repositories
+
+1. **polished-portfolio-project** (100/100) - high confidence; 20 passed checks.
+2. **tests-without-readme** (75/100) - high confidence; 13 passed checks.
+3. **production-node-api-no-tests** (70/100) - high confidence; 16 passed checks.
+4. **static-landing-page** (70/100) - high confidence; 15 passed checks.
+5. **experimental-repository** (62/100) - high confidence; 7 passed checks.
+
+### Weakest repositories
+
+1. **empty-repository** (30/100) - Without an ignore policy, local credentials, build output, and editor files are easier to commit accidentally.
+2. **committed-environment-file** (45/100) - The filenames strongly suggest local environment data, private keys, or credentials. Content was not included in the report.
+3. **strong-docs-weak-security** (45/100) - The filenames strongly suggest local environment data, private keys, or credentials. Content was not included in the report.
+4. **experimental-repository** (62/100) - Without an ignore policy, local credentials, build output, and editor files are easier to commit accidentally.
+5. **production-node-api-no-tests** (70/100) - Tests may be intentionally omitted in a small experiment, but important behavior has no regression protection.
+
+### Highest-risk repositories
+
+1. **committed-environment-file** (45/100) - Confirmed tracked credential-shaped files prevent a healthy score.
+2. **strong-docs-weak-security** (45/100) - Confirmed tracked credential-shaped files prevent a healthy score.
+3. **empty-repository** (30/100) - No root .gitignore was found
+4. **experimental-repository** (62/100) - No root .gitignore was found
+
+### Easiest improvements
+
+1. **[CRITICAL] Add a technology-appropriate .gitignore, including environment and local credential files.**
+   - Effort: small; likely impact: high; priority: 40
+   - Without an ignore policy, local credentials, build output, and editor files are easier to commit accidentally.
+2. **[MEDIUM] Add a minimal CI workflow that installs dependencies and runs the existing lint, build, and test commands.**
+   - Effort: small; likely impact: medium; priority: 36
+   - CI is not mandatory for every repository, but substantial projects benefit from running checks on every change.
+3. **[MEDIUM] Add a minimal CI workflow that installs dependencies and runs the existing lint, build, and test commands.**
+   - Effort: small; likely impact: medium; priority: 36
+   - CI is not mandatory for every repository, but substantial projects benefit from running checks on every change.
+4. **[CRITICAL] Add a technology-appropriate .gitignore, including environment and local credential files.**
+   - Effort: small; likely impact: high; priority: 35
+   - Without an ignore policy, local credentials, build output, and editor files are easier to commit accidentally.
+5. **[MEDIUM] Add a concise README covering purpose, setup, and one working usage example.**
+   - Effort: small; likely impact: low; priority: 34
+   - A repository without a root README gives new users no reliable starting point.
+6. **[MEDIUM] Add the intended licence or state clearly that the project is private/proprietary.**
+   - Effort: small; likely impact: low; priority: 34
+   - Without a licence, reuse and contribution rights are unclear. Private repositories may intentionally omit one.
+7. **[MEDIUM] Add a concise README covering purpose, setup, and one working usage example.**
+   - Effort: small; likely impact: low; priority: 34
+   - A repository without a root README gives new users no reliable starting point.
+8. **[LOW] Lead the README with one plain-language sentence explaining the project, audience, and value.**
+   - Effort: small; likely impact: low; priority: 25
+   - Neither the package manifest nor README provides a sufficiently descriptive summary.
+
+### Potentially abandoned repositories
+
+1. **experimental-repository** (62/100) - Last commit was <age> days ago.
+
+## Repository overview
+
+| Repository | Overall | Confidence | Type | Scoring profile | Activity | Peer rank |
+|---|---:|---|---|---|---|---:|
+| empty-repository | 30 | low (0.44) | unknown | portfolio | unknown | 1/1 |
+| committed-environment-file | 45 | high (0.87) | node | portfolio | unknown | 1/2 |
+| strong-docs-weak-security | 45 | high (0.87) | node | portfolio | unknown | 2/2 |
+| experimental-repository | 62 | high (0.91) | python | experimental | possibly-abandoned | 1/1 |
+| production-node-api-no-tests | 70 | high (0.91) | node | production | unknown | 1/1 |
+| static-landing-page | 70 | high (0.87) | static-web | portfolio | unknown | 1/1 |
+| tests-without-readme | 75 | high (0.91) | node | library | unknown | 1/1 |
+| polished-portfolio-project | 100 | high (0.91) | react-vite | portfolio | unknown | 1/1 |
+
+## Peer groups
+
+- **node/non-production**: 1 repositories, average 75/100 - tests-without-readme
+- **node/production**: 1 repositories, average 70/100 - production-node-api-no-tests
+- **node/unspecified**: 2 repositories, average 45/100 - committed-environment-file, strong-docs-weak-security
+- **python/non-production**: 1 repositories, average 62/100 - experimental-repository
+- **react-vite/production**: 1 repositories, average 100/100 - polished-portfolio-project
+- **static-web/unspecified**: 1 repositories, average 70/100 - static-landing-page
+- **unknown/unspecified**: 1 repositories, average 30/100 - empty-repository
+
+"
+`;
+
+exports[`report snapshots and comparison mode > keeps Markdown and structured JSON summaries stable 2`] = `
+{
+  "metadata": {
+    "comparisonMode": "peer",
+    "repositoryCount": 8,
+    "scoringProfile": "portfolio",
+    "toolVersion": "0.1.0",
+  },
+  "peers": [
+    {
+      "averageScore": 75,
+      "group": "node/non-production",
+      "repositories": [
+        "tests-without-readme",
+      ],
+    },
+    {
+      "averageScore": 70,
+      "group": "node/production",
+      "repositories": [
+        "production-node-api-no-tests",
+      ],
+    },
+    {
+      "averageScore": 45,
+      "group": "node/unspecified",
+      "repositories": [
+        "committed-environment-file",
+        "strong-docs-weak-security",
+      ],
+    },
+    {
+      "averageScore": 62,
+      "group": "python/non-production",
+      "repositories": [
+        "experimental-repository",
+      ],
+    },
+    {
+      "averageScore": 100,
+      "group": "react-vite/production",
+      "repositories": [
+        "polished-portfolio-project",
+      ],
+    },
+    {
+      "averageScore": 70,
+      "group": "static-web/unspecified",
+      "repositories": [
+        "static-landing-page",
+      ],
+    },
+    {
+      "averageScore": 30,
+      "group": "unknown/unspecified",
+      "repositories": [
+        "empty-repository",
+      ],
+    },
+  ],
+  "repositories": [
+    {
+      "confidence": "high",
+      "name": "committed-environment-file",
+      "peer": {
+        "group": "node/unspecified",
+        "outOf": 2,
+        "percentile": 100,
+        "rank": 1,
+      },
+      "score": 45,
+    },
+    {
+      "confidence": "low",
+      "name": "empty-repository",
+      "peer": {
+        "group": "unknown/unspecified",
+        "outOf": 1,
+        "percentile": 100,
+        "rank": 1,
+      },
+      "score": 30,
+    },
+    {
+      "confidence": "high",
+      "name": "experimental-repository",
+      "peer": {
+        "group": "python/non-production",
+        "outOf": 1,
+        "percentile": 100,
+        "rank": 1,
+      },
+      "score": 62,
+    },
+    {
+      "confidence": "high",
+      "name": "polished-portfolio-project",
+      "peer": {
+        "group": "react-vite/production",
+        "outOf": 1,
+        "percentile": 100,
+        "rank": 1,
+      },
+      "score": 100,
+    },
+    {
+      "confidence": "high",
+      "name": "production-node-api-no-tests",
+      "peer": {
+        "group": "node/production",
+        "outOf": 1,
+        "percentile": 100,
+        "rank": 1,
+      },
+      "score": 70,
+    },
+    {
+      "confidence": "high",
+      "name": "static-landing-page",
+      "peer": {
+        "group": "static-web/unspecified",
+        "outOf": 1,
+        "percentile": 100,
+        "rank": 1,
+      },
+      "score": 70,
+    },
+    {
+      "confidence": "high",
+      "name": "strong-docs-weak-security",
+      "peer": {
+        "group": "node/unspecified",
+        "outOf": 2,
+        "percentile": 0,
+        "rank": 2,
+      },
+      "score": 45,
+    },
+    {
+      "confidence": "high",
+      "name": "tests-without-readme",
+      "peer": {
+        "group": "node/non-production",
+        "outOf": 1,
+        "percentile": 100,
+        "rank": 1,
+      },
+      "score": 75,
+    },
+  ],
+  "schemaVersion": "1.0",
+  "summary": {
+    "abandoned": [
+      "experimental-repository",
+    ],
+    "attentionRequired": 4,
+    "averageConfidence": 0.84,
+    "averageScore": 62,
+    "highestRisk": [
+      "committed-environment-file",
+      "strong-docs-weak-security",
+      "empty-repository",
+      "experimental-repository",
+    ],
+    "medianScore": 66,
+    "strongest": [
+      "polished-portfolio-project",
+      "tests-without-readme",
+      "production-node-api-no-tests",
+      "static-landing-page",
+      "experimental-repository",
+    ],
+    "weakest": [
+      "empty-repository",
+      "committed-environment-file",
+      "strong-docs-weak-security",
+      "experimental-repository",
+      "production-node-api-no-tests",
+    ],
+  },
+}
+`;
+
+exports[`scoring quality edge cases > uses every explicit check state and emits deterministic score snapshots 1`] = `
+[
+  {
+    "activity": "unknown",
+    "beforeCaps": 89,
+    "caps": [
+      {
+        "findingId": "security-sensitive-files",
+        "reason": "Confirmed tracked credential-shaped files prevent a healthy score.",
+        "value": 45,
+      },
+    ],
+    "categoryScores": {
+      "deployment": {
+        "earned": 0,
+        "possible": 0,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 0,
+      },
+      "documentation": {
+        "earned": 86,
+        "possible": 86,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 4,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "maintainability": {
+        "earned": 58,
+        "possible": 58,
+        "states": {
+          "failed": 0,
+          "not-applicable": 3,
+          "passed": 5,
+          "unknown": 0,
+          "warning": 1,
+        },
+        "value": 100,
+      },
+      "portfolio": {
+        "earned": 60,
+        "possible": 60,
+        "states": {
+          "failed": 0,
+          "not-applicable": 2,
+          "passed": 2,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "security": {
+        "earned": 45,
+        "possible": 85,
+        "states": {
+          "failed": 1,
+          "not-applicable": 1,
+          "passed": 2,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 53,
+      },
+      "testing": {
+        "earned": 65,
+        "possible": 65,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 1,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+    },
+    "checks": [
+      {
+        "confidence": "high",
+        "id": "documentation.installation",
+        "points": "22/22",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.licence",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.readme",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.usage",
+        "points": "22/22",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.environment-template",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "security.gitignore",
+        "points": "15/15",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.secret-patterns",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.sensitive-files",
+        "points": "0/40",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.automated-tests",
+        "points": "65/65",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.ci",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.build",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.clean-worktree",
+        "points": "0/0",
+        "status": "warning",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.generated-files",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.large-files",
+        "points": "10/10",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lint",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lockfile",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.manifest",
+        "points": "16/16",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.source-structure",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.todo-debt",
+        "points": "8/8",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "deployment.configuration",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.demo",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.description",
+        "points": "35/35",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.placeholders",
+        "points": "25/25",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.visuals",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+    ],
+    "confidence": {
+      "level": "high",
+      "reasons": [
+        "The repository provides a small evidence set.",
+      ],
+      "value": 0.87,
+    },
+    "name": "committed-environment-file",
+    "overall": 45,
+    "profile": "portfolio",
+  },
+  {
+    "activity": "unknown",
+    "beforeCaps": 42,
+    "caps": [
+      {
+        "findingId": "repository-empty",
+        "reason": "An empty repository cannot demonstrate health or readiness.",
+        "value": 30,
+      },
+      {
+        "findingId": "docs-readme-missing",
+        "reason": "A repository without a README cannot demonstrate strong documentation readiness.",
+        "value": 78,
+      },
+    ],
+    "categoryScores": {
+      "deployment": {
+        "earned": 0,
+        "possible": 0,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 0,
+      },
+      "documentation": {
+        "earned": 0,
+        "possible": 86,
+        "states": {
+          "failed": 4,
+          "not-applicable": 0,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 0,
+      },
+      "maintainability": {
+        "earned": 22,
+        "possible": 22,
+        "states": {
+          "failed": 0,
+          "not-applicable": 6,
+          "passed": 3,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "portfolio": {
+        "earned": 0,
+        "possible": 35,
+        "states": {
+          "failed": 1,
+          "not-applicable": 3,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 0,
+      },
+      "security": {
+        "earned": 70,
+        "possible": 85,
+        "states": {
+          "failed": 1,
+          "not-applicable": 1,
+          "passed": 2,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 82,
+      },
+      "testing": {
+        "earned": 0,
+        "possible": 0,
+        "states": {
+          "failed": 0,
+          "not-applicable": 2,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 0,
+      },
+    },
+    "checks": [
+      {
+        "confidence": "high",
+        "id": "documentation.installation",
+        "points": "0/22",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.licence",
+        "points": "0/12",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.readme",
+        "points": "0/30",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.usage",
+        "points": "0/22",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.environment-template",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "security.gitignore",
+        "points": "0/15",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.secret-patterns",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.sensitive-files",
+        "points": "40/40",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.automated-tests",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.ci",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.build",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.clean-worktree",
+        "points": "0/0",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.generated-files",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.large-files",
+        "points": "10/10",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lint",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lockfile",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.manifest",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.source-structure",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.todo-debt",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "deployment.configuration",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.demo",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.description",
+        "points": "0/35",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.placeholders",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.visuals",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+    ],
+    "confidence": {
+      "level": "low",
+      "reasons": [
+        "Project technology could not be identified confidently.",
+        "No tracked files were available as evidence.",
+        "The repository provides a small evidence set.",
+      ],
+      "value": 0.44,
+    },
+    "name": "empty-repository",
+    "overall": 30,
+    "profile": "portfolio",
+  },
+  {
+    "activity": "possibly-abandoned",
+    "beforeCaps": 62,
+    "caps": [],
+    "categoryScores": {
+      "deployment": {
+        "earned": 0,
+        "possible": 0,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 0,
+      },
+      "documentation": {
+        "earned": 0,
+        "possible": 74,
+        "states": {
+          "failed": 3,
+          "not-applicable": 1,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 0,
+      },
+      "maintainability": {
+        "earned": 30,
+        "possible": 30,
+        "states": {
+          "failed": 0,
+          "not-applicable": 5,
+          "passed": 4,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "portfolio": {
+        "earned": 25,
+        "possible": 60,
+        "states": {
+          "failed": 1,
+          "not-applicable": 2,
+          "passed": 1,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 42,
+      },
+      "security": {
+        "earned": 70,
+        "possible": 85,
+        "states": {
+          "failed": 1,
+          "not-applicable": 1,
+          "passed": 2,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 82,
+      },
+      "testing": {
+        "earned": 33,
+        "possible": 65,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 1,
+        },
+        "value": 51,
+      },
+    },
+    "checks": [
+      {
+        "confidence": "high",
+        "id": "documentation.installation",
+        "points": "0/22",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.licence",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.readme",
+        "points": "0/30",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.usage",
+        "points": "0/22",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.environment-template",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "security.gitignore",
+        "points": "0/15",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.secret-patterns",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.sensitive-files",
+        "points": "40/40",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.automated-tests",
+        "points": "33/65",
+        "status": "warning",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.ci",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.build",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.clean-worktree",
+        "points": "0/0",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.generated-files",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.large-files",
+        "points": "10/10",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lint",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lockfile",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.manifest",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.source-structure",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.todo-debt",
+        "points": "8/8",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "deployment.configuration",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.demo",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.description",
+        "points": "0/35",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.placeholders",
+        "points": "25/25",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.visuals",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+    ],
+    "confidence": {
+      "level": "high",
+      "reasons": [
+        "The repository provides a small evidence set.",
+        "Repository intent explicitly declares the project type.",
+      ],
+      "value": 0.91,
+    },
+    "name": "experimental-repository",
+    "overall": 62,
+    "profile": "experimental",
+  },
+  {
+    "activity": "unknown",
+    "beforeCaps": 100,
+    "caps": [],
+    "categoryScores": {
+      "deployment": {
+        "earned": 100,
+        "possible": 100,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 1,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "documentation": {
+        "earned": 86,
+        "possible": 86,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 4,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "maintainability": {
+        "earned": 68,
+        "possible": 68,
+        "states": {
+          "failed": 0,
+          "not-applicable": 2,
+          "passed": 6,
+          "unknown": 0,
+          "warning": 1,
+        },
+        "value": 100,
+      },
+      "portfolio": {
+        "earned": 100,
+        "possible": 100,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 4,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "security": {
+        "earned": 85,
+        "possible": 85,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 3,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "testing": {
+        "earned": 100,
+        "possible": 100,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 2,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+    },
+    "checks": [
+      {
+        "confidence": "high",
+        "id": "documentation.installation",
+        "points": "22/22",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.licence",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.readme",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.usage",
+        "points": "22/22",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.environment-template",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "security.gitignore",
+        "points": "15/15",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.secret-patterns",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.sensitive-files",
+        "points": "40/40",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.automated-tests",
+        "points": "65/65",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.ci",
+        "points": "35/35",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.build",
+        "points": "10/10",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.clean-worktree",
+        "points": "0/0",
+        "status": "warning",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.generated-files",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.large-files",
+        "points": "10/10",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lint",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lockfile",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.manifest",
+        "points": "16/16",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.source-structure",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.todo-debt",
+        "points": "8/8",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "deployment.configuration",
+        "points": "100/100",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.demo",
+        "points": "18/18",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.description",
+        "points": "35/35",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.placeholders",
+        "points": "25/25",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.visuals",
+        "points": "22/22",
+        "status": "passed",
+      },
+    ],
+    "confidence": {
+      "level": "high",
+      "reasons": [
+        "The repository provides a small evidence set.",
+        "Repository intent explicitly declares the project type.",
+      ],
+      "value": 0.91,
+    },
+    "name": "polished-portfolio-project",
+    "overall": 100,
+    "profile": "portfolio",
+  },
+  {
+    "activity": "unknown",
+    "beforeCaps": 83,
+    "caps": [
+      {
+        "findingId": "testing-tests-missing",
+        "reason": "A production-facing repository without tests has limited readiness.",
+        "value": 70,
+      },
+    ],
+    "categoryScores": {
+      "deployment": {
+        "earned": 100,
+        "possible": 100,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 1,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "documentation": {
+        "earned": 74,
+        "possible": 74,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 3,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "maintainability": {
+        "earned": 68,
+        "possible": 68,
+        "states": {
+          "failed": 0,
+          "not-applicable": 2,
+          "passed": 6,
+          "unknown": 0,
+          "warning": 1,
+        },
+        "value": 100,
+      },
+      "portfolio": {
+        "earned": 60,
+        "possible": 60,
+        "states": {
+          "failed": 0,
+          "not-applicable": 2,
+          "passed": 2,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "security": {
+        "earned": 100,
+        "possible": 100,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 4,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "testing": {
+        "earned": 18,
+        "possible": 100,
+        "states": {
+          "failed": 1,
+          "not-applicable": 0,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 1,
+        },
+        "value": 18,
+      },
+    },
+    "checks": [
+      {
+        "confidence": "high",
+        "id": "documentation.installation",
+        "points": "22/22",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.licence",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.readme",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.usage",
+        "points": "22/22",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.environment-template",
+        "points": "15/15",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.gitignore",
+        "points": "15/15",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.secret-patterns",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.sensitive-files",
+        "points": "40/40",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.automated-tests",
+        "points": "0/65",
+        "status": "failed",
+      },
+      {
+        "confidence": "medium",
+        "id": "testing.ci",
+        "points": "18/35",
+        "status": "warning",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.build",
+        "points": "10/10",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.clean-worktree",
+        "points": "0/0",
+        "status": "warning",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.generated-files",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.large-files",
+        "points": "10/10",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lint",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lockfile",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.manifest",
+        "points": "16/16",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.source-structure",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.todo-debt",
+        "points": "8/8",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "deployment.configuration",
+        "points": "100/100",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.demo",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.description",
+        "points": "35/35",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.placeholders",
+        "points": "25/25",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.visuals",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+    ],
+    "confidence": {
+      "level": "high",
+      "reasons": [
+        "The repository provides a small evidence set.",
+        "Repository intent explicitly declares the project type.",
+      ],
+      "value": 0.91,
+    },
+    "name": "production-node-api-no-tests",
+    "overall": 70,
+    "profile": "production",
+  },
+  {
+    "activity": "unknown",
+    "beforeCaps": 94,
+    "caps": [
+      {
+        "findingId": "testing-tests-missing",
+        "reason": "A production-facing repository without tests has limited readiness.",
+        "value": 70,
+      },
+    ],
+    "categoryScores": {
+      "deployment": {
+        "earned": 100,
+        "possible": 100,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 1,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "documentation": {
+        "earned": 86,
+        "possible": 86,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 4,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "maintainability": {
+        "earned": 30,
+        "possible": 30,
+        "states": {
+          "failed": 0,
+          "not-applicable": 5,
+          "passed": 3,
+          "unknown": 0,
+          "warning": 1,
+        },
+        "value": 100,
+      },
+      "portfolio": {
+        "earned": 100,
+        "possible": 100,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 4,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "security": {
+        "earned": 85,
+        "possible": 85,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 3,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "testing": {
+        "earned": 51,
+        "possible": 100,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 2,
+        },
+        "value": 51,
+      },
+    },
+    "checks": [
+      {
+        "confidence": "high",
+        "id": "documentation.installation",
+        "points": "22/22",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.licence",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.readme",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.usage",
+        "points": "22/22",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.environment-template",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "security.gitignore",
+        "points": "15/15",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.secret-patterns",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.sensitive-files",
+        "points": "40/40",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.automated-tests",
+        "points": "33/65",
+        "status": "warning",
+      },
+      {
+        "confidence": "medium",
+        "id": "testing.ci",
+        "points": "18/35",
+        "status": "warning",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.build",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.clean-worktree",
+        "points": "0/0",
+        "status": "warning",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.generated-files",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.large-files",
+        "points": "10/10",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lint",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lockfile",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.manifest",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.source-structure",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.todo-debt",
+        "points": "8/8",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "deployment.configuration",
+        "points": "100/100",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.demo",
+        "points": "18/18",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.description",
+        "points": "35/35",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.placeholders",
+        "points": "25/25",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.visuals",
+        "points": "22/22",
+        "status": "passed",
+      },
+    ],
+    "confidence": {
+      "level": "high",
+      "reasons": [
+        "The repository provides a small evidence set.",
+      ],
+      "value": 0.87,
+    },
+    "name": "static-landing-page",
+    "overall": 70,
+    "profile": "portfolio",
+  },
+  {
+    "activity": "unknown",
+    "beforeCaps": 89,
+    "caps": [
+      {
+        "findingId": "security-sensitive-files",
+        "reason": "Confirmed tracked credential-shaped files prevent a healthy score.",
+        "value": 45,
+      },
+    ],
+    "categoryScores": {
+      "deployment": {
+        "earned": 0,
+        "possible": 0,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 0,
+      },
+      "documentation": {
+        "earned": 86,
+        "possible": 86,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 4,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "maintainability": {
+        "earned": 58,
+        "possible": 58,
+        "states": {
+          "failed": 0,
+          "not-applicable": 3,
+          "passed": 5,
+          "unknown": 0,
+          "warning": 1,
+        },
+        "value": 100,
+      },
+      "portfolio": {
+        "earned": 60,
+        "possible": 60,
+        "states": {
+          "failed": 0,
+          "not-applicable": 2,
+          "passed": 2,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "security": {
+        "earned": 45,
+        "possible": 85,
+        "states": {
+          "failed": 1,
+          "not-applicable": 1,
+          "passed": 2,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 53,
+      },
+      "testing": {
+        "earned": 65,
+        "possible": 65,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 1,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+    },
+    "checks": [
+      {
+        "confidence": "high",
+        "id": "documentation.installation",
+        "points": "22/22",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.licence",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.readme",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.usage",
+        "points": "22/22",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.environment-template",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "security.gitignore",
+        "points": "15/15",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.secret-patterns",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.sensitive-files",
+        "points": "0/40",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.automated-tests",
+        "points": "65/65",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.ci",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.build",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.clean-worktree",
+        "points": "0/0",
+        "status": "warning",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.generated-files",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.large-files",
+        "points": "10/10",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lint",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lockfile",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.manifest",
+        "points": "16/16",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.source-structure",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.todo-debt",
+        "points": "8/8",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "deployment.configuration",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.demo",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.description",
+        "points": "35/35",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.placeholders",
+        "points": "25/25",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.visuals",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+    ],
+    "confidence": {
+      "level": "high",
+      "reasons": [
+        "The repository provides a small evidence set.",
+      ],
+      "value": 0.87,
+    },
+    "name": "strong-docs-weak-security",
+    "overall": 45,
+    "profile": "portfolio",
+  },
+  {
+    "activity": "unknown",
+    "beforeCaps": 80,
+    "caps": [
+      {
+        "findingId": "docs-readme-missing",
+        "reason": "A repository without a README cannot demonstrate strong documentation readiness.",
+        "value": 75,
+      },
+    ],
+    "categoryScores": {
+      "deployment": {
+        "earned": 0,
+        "possible": 0,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 0,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 0,
+      },
+      "documentation": {
+        "earned": 12,
+        "possible": 86,
+        "states": {
+          "failed": 3,
+          "not-applicable": 0,
+          "passed": 1,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 14,
+      },
+      "maintainability": {
+        "earned": 58,
+        "possible": 58,
+        "states": {
+          "failed": 0,
+          "not-applicable": 3,
+          "passed": 5,
+          "unknown": 0,
+          "warning": 1,
+        },
+        "value": 100,
+      },
+      "portfolio": {
+        "earned": 60,
+        "possible": 60,
+        "states": {
+          "failed": 0,
+          "not-applicable": 2,
+          "passed": 2,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "security": {
+        "earned": 85,
+        "possible": 85,
+        "states": {
+          "failed": 0,
+          "not-applicable": 1,
+          "passed": 3,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+      "testing": {
+        "earned": 100,
+        "possible": 100,
+        "states": {
+          "failed": 0,
+          "not-applicable": 0,
+          "passed": 2,
+          "unknown": 0,
+          "warning": 0,
+        },
+        "value": 100,
+      },
+    },
+    "checks": [
+      {
+        "confidence": "high",
+        "id": "documentation.installation",
+        "points": "0/22",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.licence",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.readme",
+        "points": "0/30",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "documentation.usage",
+        "points": "0/22",
+        "status": "failed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.environment-template",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "security.gitignore",
+        "points": "15/15",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.secret-patterns",
+        "points": "30/30",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "security.sensitive-files",
+        "points": "40/40",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.automated-tests",
+        "points": "65/65",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "testing.ci",
+        "points": "35/35",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.build",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.clean-worktree",
+        "points": "0/0",
+        "status": "warning",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.generated-files",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.large-files",
+        "points": "10/10",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lint",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.lockfile",
+        "points": "12/12",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.manifest",
+        "points": "16/16",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.source-structure",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "maintainability.todo-debt",
+        "points": "8/8",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "deployment.configuration",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.demo",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.description",
+        "points": "35/35",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.placeholders",
+        "points": "25/25",
+        "status": "passed",
+      },
+      {
+        "confidence": "high",
+        "id": "portfolio.visuals",
+        "points": "N/A",
+        "status": "not-applicable",
+      },
+    ],
+    "confidence": {
+      "level": "high",
+      "reasons": [
+        "The repository provides a small evidence set.",
+        "Repository intent explicitly declares the project type.",
+      ],
+      "value": 0.91,
+    },
+    "name": "tests-without-readme",
+    "overall": 75,
+    "profile": "library",
+  },
+]
+`;

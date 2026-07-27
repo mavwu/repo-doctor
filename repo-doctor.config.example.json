@@ -1,0 +1,31 @@
+{
+  "ignoreRepositories": [
+    "archived-*",
+    "vendor/legacy-app"
+  ],
+  "maxDepth": 4,
+  "largeFileBytes": 1048576,
+  "scoringProfile": "portfolio",
+  "comparisonMode": "peer",
+  "customRules": [
+    {
+      "id": "team-contributing-guide",
+      "description": "Team projects should explain how to contribute.",
+      "kind": "require-file",
+      "pattern": "CONTRIBUTING.md",
+      "category": "maintainability",
+      "deduction": 4,
+      "severity": "possible",
+      "projectTypes": ["node", "nextjs", "react-vite"]
+    },
+    {
+      "id": "forbid-local-notes",
+      "description": "Personal scratch notes should not be committed.",
+      "kind": "forbid-file",
+      "pattern": "notes.local.md",
+      "category": "maintainability",
+      "deduction": 3,
+      "severity": "confirmed"
+    }
+  ]
+}

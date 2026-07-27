@@ -1,0 +1,42 @@
+{
+  "name": "repo-doctor",
+  "version": "0.1.0",
+  "description": "A read-only local health scanner for directories containing multiple Git repositories.",
+  "type": "module",
+  "bin": {
+    "repo-doctor": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "node scripts/clean.mjs && tsc -p tsconfig.json",
+    "test": "vitest run",
+    "lint": "eslint src tests",
+    "check": "npm run lint && npm run build && npm test",
+    "dev": "tsx src/cli.ts",
+    "start": "node dist/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "git",
+    "repository",
+    "health-check",
+    "developer-tools",
+    "cli"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@eslint/js": "^9.32.0",
+    "@types/node": "^24.1.0",
+    "eslint": "^9.32.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.38.0",
+    "vitest": "^4.1.10"
+  }
+}

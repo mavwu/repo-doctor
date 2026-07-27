@@ -1,0 +1,12 @@
+{
+  "intendedProjectType": "node",
+  "productionStatus": "production",
+  "private": true,
+  "scoringProfile": "production",
+  "intentionallyOmittedChecks": [
+    "portfolio.visuals"
+  ],
+  "customExclusions": [
+    "fixtures/generated/**"
+  ]
+}
