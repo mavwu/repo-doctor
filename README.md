@@ -231,3 +231,7 @@ credential-shaped string is active. Activity uses the last local Git commit,
 not remote hosting data. Peer groups with only one repository are descriptive,
 not statistically meaningful. Inaccessible and malformed repositories are
 included where possible with explicit low-confidence or unknown results.
+
+## Implementation guide
+
+See the [implementation guide](docs/PROJECT_GUIDE.md) for repository scope, local evaluation, code responsibilities, and verification expectations.
